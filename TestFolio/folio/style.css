@@ -1,0 +1,229 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #2c3531 #116466  #d9b08c  #ffcb9a  #d1e8e2 */
+body {
+  background: linear-gradient(90deg, #d1e8e2, #116466);
+  /* background-color: #116466; */
+  /* color: #15db95; */
+  font-family: "Roboto" sans-serif;
+  margin: 0;
+}
+
+nav {
+  background: linear-gradient(90deg, #116466, #ffcb9a);
+  /* background-color: #d9b08c; */
+  color: #ffcb9a;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  font-size: 2.1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #116466;
+  position: relative;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+/* ::after and transition look up and learn@ */
+nav a::after {
+  content: "";
+  border-bottom: 3px solid #d1e8e2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+/* has to be done */
+nav a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header {
+  background: url(/folio/images/macB.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #d1e8e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/* header:hover {
+  background: url(/folio/images/macB.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.5;
+} */
+
+/* header & header::after & header * : create that the img is seen through and the text is colored as aspected*/
+header::after {
+  content: " ";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+/* z-index puts all elements on top of the overlay */
+header * {
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  font-size: 60px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  color: #ffcb9a;
+}
+
+.your {
+  margin-left: 0%;
+  color: #ffcb9a;
+  font-size: 38px;
+  padding: 5px;
+}
+
+.our {
+  margin-left: 18%;
+  color: #ffcb9a;
+  font-size: 46px;
+  padding: 5px;
+}
+
+.rob {
+  margin-left: 36%;
+  font-size: 40px;
+  color: #ffcb9a;
+  padding: 5px;
+}
+
+/* , -  in about section collored different */
+.double {
+  color: #d1e8e2;
+}
+
+header p {
+  font-size: 30px;
+  margin: 0;
+}
+
+/* my Full name in animation H3 */
+h3 {
+  color: #d1e8e2;
+  font-size: 46px;
+  font-family: fantasy;
+  /* animation-delay: 1s; */
+  animation-fill-mode: both;
+}
+section {
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  color: #f4e4c1;
+}
+
+section h2 {
+  margin: 0;
+}
+
+section p {
+  margin-top: 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 810px;
+  margin: 5px auto 0;
+}
+
+/* by adapting these px and .projects img as max-width 100% the image scale gets adjust */
+.projects {
+  margin: 20px;
+  max-width: 250px;
+}
+
+.projects img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 3px solid #2c3531;
+}
+
+/* this class involves the project paragraph elements */
+.line {
+  color: #2c3531;
+  font-weight: 800;
+  margin: 10px;
+}
+/* #2c3531 #116466  #d9b08c  #ffcb9a  #d1e8e2 */
+.project-tile {
+  width: auto;
+}
+.bg-item {
+  background-color: #d9b08c;
+  color: #116466;
+  font-weight: 700;
+}
+
+.social-ul {
+  display: flex;
+  /* flex-wrap: involves @media and mobile look; */
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-ul a {
+  color: #116466;
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #2c3531;
+  color: #d1e8e2;
+  padding: 30px;
+  text-align: center;
+}
+.project-tile {
+  color: #d1e8e2;
+}
+
+/* footer.copy colors the copy symbol :) */
+footer .copy {
+  color: #d9b08c;
+}
+
+@media (max-width: 440px) {
+  section {
+    padding: 20px;
+  }
+}
+/* #2c3531 #116466  #d9b08c  #ffcb9a  #d1e8e2 */
